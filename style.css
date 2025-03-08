@@ -96,7 +96,7 @@ body{
 .about{
     background:  #1a1a1a;
     padding: 1rem 4rem;
-    margin: 2rem 2rem;
+    margin: 3rem 2rem;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -183,7 +183,7 @@ body{
 .item .bar{
     background: rgba(228, 229, 228, 0.273); 
     border-radius: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
@@ -303,4 +303,9 @@ body{
     .navbar{
         gap: 0.3rem;
     }
+    .item .skil{
+
+        padding: 0.2rem;
+    }
+
 }
