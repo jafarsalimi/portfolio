@@ -17,26 +17,42 @@
 html{
     font-size:100%;
     font-family: Parastoo;
+    scroll-behavior: smooth;
+
 }
 body{
     background:  #121212;
     color: #e0e0e0;
     line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
+
 .header{
-    background: #0d0d0d;
+    width: 90%;
+    margin:0 5%;
+    background: #0d0d0d; 
     color: #ffff;
     display:flex;
     justify-content:center;
     align-items: center;
     gap: 2rem;
     padding: 1rem 0;
-    /* border-radius: 1rem; */
+    border-radius: 1rem;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0.4rem;
+    z-index: 1200;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .header .logo-name{
     font-size: 1.5rem;
     font-weight: bold;
+
+}
+.header a{
+    text-decoration: none;
+    color: #ffff;
 }
 .header .navbar{
     display: flex;
@@ -44,8 +60,6 @@ body{
     gap: 1rem;
 }
 .navbar a{
-    text-decoration: none;
-    color: #ffff;
     padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -67,6 +81,7 @@ body{
     gap: 2.5rem;
 
 }
+
 .hero .text{
     display: flex;
     flex-flow: column;
@@ -79,7 +94,6 @@ body{
     min-width: 20rem;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 60px 40px -7px;
     border-radius: 5rem;
-    
 
 }
 .text .title{
@@ -119,7 +133,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 
 }
 
@@ -127,32 +141,40 @@ body{
 .projects .project{
     background: #222831; 
 
-    padding: 2rem;
+    padding: 1rem 1rem;
     border-radius:2rem;
     display: flex;
+    flex-basis: 33%;
     flex-flow: column;
     align-items: center;
-    gap: 1rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 .project:hover{
     background:  #007bff47 ;
+    transform: scale(1.02);
+    transition: 0.2s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .project .title{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
+    align-self: flex-start;
 
 }
 .project .des{
-    text-align: center;
+    text-align: right;
+    font-size: 0.8rem;
 }
 .project .image{
-    height: 10rem;
-    max-height: 10rem;
-    min-height: 5rem;
+    height: 12rem;
+    width: 100%;
+    max-height: 12rem;
+    min-height: 3rem; 
     border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
+
 /*Experience*/
 .exp{
     /* background: #1a1a2e ; */
@@ -242,7 +264,6 @@ body{
     padding: 0 1rem;
 }
 
-
 .titr{
     padding: 1rem;
     text-align: center;
@@ -296,9 +317,13 @@ body{
         gap: 0.5rem;
         flex-flow: column;
     }
+    .project-section{
+        padding: 1rem 3rem;
+    }
     .project-section .projects{
 
         flex-flow: column;
+        gap: 1rem;
     }
     .navbar{
         gap: 0.3rem;
@@ -308,4 +333,15 @@ body{
         padding: 0.2rem;
     }
 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
